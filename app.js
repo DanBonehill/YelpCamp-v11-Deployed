@@ -16,9 +16,9 @@ var commentRoutes       = require("./routes/comments"),
     campgroundRoutes    = require("./routes/campgrounds"),
     indexRoutes         = require("./routes/index");
 
+var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp_v10";
 //Connects Mongoose to MongoDB
-mongoose.connect(process.env.DATABASEURL);
-// mongoose.connect("mongodb://Dan:password@ds055865.mongolab.com:55865/dan-yelpcamp");
+mongoose.connect(url);
 // Tells express to use body-parser
 app.use(bodyParser.urlencoded({extended: true}));
 // Sets the file type to ejs unless stated otherwise
