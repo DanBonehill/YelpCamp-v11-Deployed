@@ -17,7 +17,8 @@ var commentRoutes       = require("./routes/comments"),
     indexRoutes         = require("./routes/index");
 
 //Connects Mongoose to MongoDB
-mongoose.connect("mongodb://localhost/yelp_camp_v10");
+// mongoose.connect("mongodb://localhost/yelp_camp_v10");
+mongoose.connect("mongodb://Dan:password@ds055865.mongolab.com:55865/dan-yelpcamp");
 // Tells express to use body-parser
 app.use(bodyParser.urlencoded({extended: true}));
 // Sets the file type to ejs unless stated otherwise
